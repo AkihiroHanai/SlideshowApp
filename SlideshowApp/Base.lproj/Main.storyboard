@@ -77,6 +77,7 @@
                         <outlet property="imgBox" destination="oZm-6i-NzO" id="dLa-nJ-ivl"/>
                         <outlet property="nextButton" destination="Nj6-8k-rau" id="d9f-fL-oiF"/>
                         <outlet property="prevButton" destination="T7C-Ld-SA6" id="V0G-Mm-9Qy"/>
+                        <outlet property="startAndPauseButton" destination="3Pd-Mi-2AM" id="6ho-Ug-Ibf"/>
                         <segue destination="Vvo-u8-6RY" kind="modal" identifier="singleImage" id="tkJ-m6-5rO"/>
                     </connections>
                 </viewController>

@@ -39,9 +39,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
     
+    // スタート&ポーズボタン
+    @IBOutlet weak var startAndPauseButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // スタートボタンのテキスト変更
+        self.startAndPauseButton.setTitle("再生", forState: .Normal)
         
         // 画像の初期設定
         self.imgBox.image = images[0]
@@ -62,7 +68,12 @@ class ViewController: UIViewController {
             secondViewController.param = "img\(currentImg).png"
         } else {
             timer.invalidate()
+            nextButton.enabled = true
+            prevButton.enabled = true
             secondViewController.param = "img\(currentImg).png"
+            toggleState = 1
+            // スタートボタンのテキスト変更
+            self.startAndPauseButton.setTitle("再生", forState: .Normal)
         }
     }
     
@@ -91,6 +102,9 @@ class ViewController: UIViewController {
             toggleState = 2
             animationFlag = true
             
+            // スタートボタンのテキスト変更
+            self.startAndPauseButton.setTitle("停止", forState: .Normal)
+            
             print("スタート")
             
         } else {
@@ -102,6 +116,9 @@ class ViewController: UIViewController {
             
             toggleState = 1
             animationFlag = false
+            
+            // スタートボタンのテキスト変更
+            self.startAndPauseButton.setTitle("再生", forState: .Normal)
             
             print("ポーズ")
         }
