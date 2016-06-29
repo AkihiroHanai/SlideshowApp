@@ -1,25 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oZm-6i-NzO">
+                                <rect key="frame" x="40" y="28" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="2Yo-yh-Guu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="eG8-A6-uIN"/>
+                                    <constraint firstAttribute="width" constant="240" id="jdM-oI-dFk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="nEI-0M-0Tz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-8k-rau">
+                                <rect key="frame" x="250" y="276" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9zy-h7-551"/>
+                                    <constraint firstAttribute="width" constant="30" id="lYl-zh-3On"/>
+                                </constraints>
+                                <state key="normal" title="進む"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QlD-f6-LhY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-Mi-2AM">
+                                <rect key="frame" x="124" y="276" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="cr1-aV-NlL"/>
+                                    <constraint firstAttribute="height" constant="30" id="vR1-V1-zIX"/>
+                                </constraints>
+                                <state key="normal" title="再生 / 停止"/>
+                                <connections>
+                                    <action selector="playpause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBg-iT-cqh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7C-Ld-SA6">
+                                <rect key="frame" x="40" y="276" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S9q-QL-Jy6"/>
+                                    <constraint firstAttribute="width" constant="30" id="zT6-6k-ozs"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="prev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tyc-2S-FlS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Pd-Mi-2AM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47M-k9-mXe"/>
+                            <constraint firstItem="3Pd-Mi-2AM" firstAttribute="top" secondItem="oZm-6i-NzO" secondAttribute="bottom" constant="8" id="49Q-f5-wri"/>
+                            <constraint firstItem="oZm-6i-NzO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="IUF-Tj-wcU"/>
+                            <constraint firstItem="Nj6-8k-rau" firstAttribute="leading" secondItem="3Pd-Mi-2AM" secondAttribute="trailing" constant="53" id="OMU-mo-cUU"/>
+                            <constraint firstItem="oZm-6i-NzO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eq3-TK-nre"/>
+                            <constraint firstItem="3Pd-Mi-2AM" firstAttribute="leading" secondItem="T7C-Ld-SA6" secondAttribute="trailing" constant="54" id="fCf-Wn-ZM8"/>
+                            <constraint firstItem="T7C-Ld-SA6" firstAttribute="top" secondItem="oZm-6i-NzO" secondAttribute="bottom" constant="8" id="i3l-30-ZfY"/>
+                            <constraint firstItem="Nj6-8k-rau" firstAttribute="top" secondItem="oZm-6i-NzO" secondAttribute="bottom" constant="8" id="raX-Be-Ss1"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgBox" destination="oZm-6i-NzO" id="dLa-nJ-ivl"/>
+                        <outlet property="nextButton" destination="Nj6-8k-rau" id="d9f-fL-oiF"/>
+                        <outlet property="prevButton" destination="T7C-Ld-SA6" id="V0G-Mm-9Qy"/>
+                        <segue destination="Vvo-u8-6RY" kind="modal" identifier="singleImage" id="tkJ-m6-5rO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="459" y="387"/>
+        </scene>
+        <!--Single Image Controller-->
+        <scene sceneID="Vrr-gH-eaL">
+            <objects>
+                <viewController id="Vvo-u8-6RY" customClass="SingleImageController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4sm-Nv-w7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="oCa-Ja-v3C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ufi-uU-VMk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnq-C4-dUS">
+                                <rect key="frame" x="10" y="28" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7GT-VI-lyi"/>
+                                    <constraint firstAttribute="width" constant="300" id="Qkx-SF-inA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-fk-Zp5">
+                                <rect key="frame" x="145" y="336" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A6J-Sz-UbC"/>
+                                    <constraint firstAttribute="width" constant="30" id="yfX-Tb-ewX"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="kL9-KW-4Yd" kind="unwind" unwindAction="unwind:" id="N2R-tT-Zrs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FuK-fk-Zp5" firstAttribute="top" secondItem="jnq-C4-dUS" secondAttribute="bottom" constant="8" id="9ZF-2t-IhT"/>
+                            <constraint firstItem="jnq-C4-dUS" firstAttribute="top" secondItem="4sm-Nv-w7a" secondAttribute="bottom" constant="8" id="JvV-bM-7cY"/>
+                            <constraint firstItem="jnq-C4-dUS" firstAttribute="centerX" secondItem="ufi-uU-VMk" secondAttribute="centerX" id="Mig-5e-DQo"/>
+                            <constraint firstItem="FuK-fk-Zp5" firstAttribute="centerX" secondItem="ufi-uU-VMk" secondAttribute="centerX" id="ROz-UV-7me"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="singleImageView" destination="jnq-C4-dUS" id="R0K-PR-ot1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0y-IM-cv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kL9-KW-4Yd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="387"/>
         </scene>
     </scenes>
 </document>

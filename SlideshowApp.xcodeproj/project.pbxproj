@@ -12,6 +12,7 @@
 		346BA2421D226550006149C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346BA2401D226550006149C4 /* Main.storyboard */; };
 		346BA2441D226550006149C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BA2431D226550006149C4 /* Assets.xcassets */; };
 		346BA2471D226550006149C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346BA2451D226550006149C4 /* LaunchScreen.storyboard */; };
+		346BA2511D22AA00006149C4 /* SingleImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BA2501D22AA00006149C4 /* SingleImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		346BA2431D226550006149C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		346BA2461D226550006149C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		346BA2481D226550006149C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		346BA2501D22AA00006149C4 /* SingleImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				346BA23C1D226550006149C4 /* AppDelegate.swift */,
 				346BA23E1D226550006149C4 /* ViewController.swift */,
+				346BA2501D22AA00006149C4 /* SingleImageController.swift */,
 				346BA2401D226550006149C4 /* Main.storyboard */,
 				346BA2431D226550006149C4 /* Assets.xcassets */,
 				346BA2451D226550006149C4 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				346BA23F1D226550006149C4 /* ViewController.swift in Sources */,
 				346BA23D1D226550006149C4 /* AppDelegate.swift in Sources */,
+				346BA2511D22AA00006149C4 /* SingleImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +292,7 @@
 				346BA24D1D226550006149C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
